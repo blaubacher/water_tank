@@ -6,7 +6,8 @@ module water_tank
   type, public :: tank_t
     real:: diam, orifice_diam, h, sg
   contains  
-    procedure :: mass, mdot, vel, p, rho, csa, sw, oa
+    procedure :: mass, mdot, vel, p, rho, csa, sw, &
+                 orifice_area
   end type tank_t
 
 interface
@@ -46,9 +47,9 @@ interface
     real :: csa
   end function
 
-  module function oa(tank)
+  module function orifice_area(tank)
     class(tank_t), intent(in) :: tank
-    real :: oa
+    real :: orifice_area
   end function
 
   end interface

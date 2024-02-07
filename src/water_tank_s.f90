@@ -16,7 +16,7 @@ module procedure vel
 end procedure
 
 module procedure mdot
-  mdot=tank%rho()*tank%vel()*tank%oa()
+  mdot=tank%rho()*tank%vel()*tank%orifice_area()
 end procedure
 
 module procedure sw
@@ -31,8 +31,8 @@ module procedure csa
   csa=pi*(tank%diam/2)**2
 end procedure
 
-module procedure oa
-  oa=pi*(tank%orifice_diam/2)**2
+module procedure orifice_area
+  orifice_area=pi*(tank%orifice_diam/2)**2
 end procedure
 
 end submodule
