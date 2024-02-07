@@ -3,7 +3,7 @@ module rate_m
     private
 
     type, public :: rate_t
-        real :: tank_height_rate 
+        real :: rate 
     end type
 
 end module rate_m

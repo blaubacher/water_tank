@@ -3,7 +3,6 @@ module increment_m
     private
 
     type, public :: increment_t
-        implicit none
         real :: increment
     end type
 
